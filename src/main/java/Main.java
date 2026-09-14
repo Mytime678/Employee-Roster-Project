@@ -42,6 +42,27 @@ public class Main {
             System.out.println("3. Delete an employee profile");
             System.out.println("4. View all employee profiles");
             System.out.println("5. Back");
+
+            // Verify user choice
+            // set variables for userchoice varifications
+            boolean valid1 = false;
+            int choice1 = 0;
+
+            while(!valid1) {
+                System.out.print("Which would you like to see? (1/2/3/4/5): ");
+                String userInput = sc.nextLine();
+                try {
+                    choice1 = Integer.parseInt(userInput);
+
+                    if(choice1 >= 1 && choice <= 5) {
+                        valid1 = true;
+                    } else {
+                        System.out.println("The number must be between 1 and 5");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Please enter a number between 1 and 5");
+                }
+            }
         }
 
 
